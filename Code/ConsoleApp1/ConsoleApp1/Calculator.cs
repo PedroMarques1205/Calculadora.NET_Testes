@@ -2,22 +2,22 @@
 
 public class Calculator
 {
-    static double Add(double num1, double num2)
+    public static double Add(double num1, double num2)
     {
         return num1 + num2;
     }
 
-    static double Subtract(double num1, double num2)
+    public static double Subtract(double num1, double num2)
     {
         return num1 - num2;
     }
 
-    static double Multiply(double num1, double num2)
+    public static double Multiply(double num1, double num2)
     {
         return num1 * num2;
     }
 
-    static double Divide(double num1, double num2)
+    public static double Divide(double num1, double num2)
     {
         if (num2 == 0)
         {
@@ -26,7 +26,7 @@ public class Calculator
         return num1 / num2;
     }
 
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         Console.WriteLine("=== C# .NET Calculator ===");
         Console.WriteLine("4 Methods: Add, Subtract, Multiply, Divide\n");
