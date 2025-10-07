@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-class Calculator
+public class Calculator
 {
     static double Add(double num1, double num2)
     {
