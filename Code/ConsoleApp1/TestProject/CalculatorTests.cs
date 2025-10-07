@@ -6,7 +6,12 @@ public class CalculatorTests
     private double InvokeMultiply(double num1, double num2)
     {
         var method = typeof(Calculator).GetMethod("Multiply", BindingFlags.NonPublic | BindingFlags.Static);
-        return (double)method.Invoke(null, new object[] { num1, num2 });
+        if (method == null)
+            throw new MissingMethodException("Método não encontrado.");
+        var result = method.Invoke(null, new object[] { num1, num2 });
+        if (result == null)
+            throw new InvalidOperationException("O método retornou nulo.");
+        return (double)result;
     }
 
     // Multiplicação de dois números positivos
